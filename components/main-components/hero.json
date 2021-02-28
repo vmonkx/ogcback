@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_main_components_heroes",
+  "info": {
+    "name": "hero",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "info": {
+      "type": "text"
+    }
+  }
+}
