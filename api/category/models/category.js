@@ -20,7 +20,7 @@ module.exports = {
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
       }else {
-        data.slug = data.slug.toLowerCase();
+        data.slug = data.slug?.toLowerCase();
       }
     },
   },

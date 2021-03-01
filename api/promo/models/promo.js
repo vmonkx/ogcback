@@ -11,7 +11,7 @@ module.exports = {
   lifecycles: {
     beforeCreate: async (data) => {
       
-      console.log("beforeCreatedata", data);
+      
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
       } else {
@@ -19,8 +19,7 @@ module.exports = {
       }
     },
     beforeUpdate: async (params, data) => {
-      console.log("beforeUpdateparams", params);
-      console.log("beforeUpdatedata", data);
+     
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
       } else {
