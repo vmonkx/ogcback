@@ -12,6 +12,7 @@
     "devDependencies": {},
     "dependencies": {
         "axios": "^0.21.1",
+        "fast-average-color-node": "^1.0.3",
         "knex": "<0.20.0",
         "pg": "^8.5.1",
         "slugify": "^1.4.6",

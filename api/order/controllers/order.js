@@ -29,7 +29,7 @@ module.exports = {
       if (order) {
         MessageToTelegram.sendMsg(order);
         res.status = 200;
-        res.body = "Заявка успешно отправлено!";
+        res.body = "Заявка успешно отправлена!";
       } else {
         res.status = 400;
         res.body = "Произошла ошибка! Попробуйте еще раз";
