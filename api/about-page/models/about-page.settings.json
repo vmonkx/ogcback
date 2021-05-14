@@ -1,8 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "categories",
+  "kind": "singleType",
+  "collectionName": "about_pages",
   "info": {
-    "name": "Category",
+    "name": "AboutPage",
     "description": ""
   },
   "options": {
@@ -11,20 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
+    "title": {
+      "type": "string"
     },
     "description": {
-      "type": "text"
-    },
-    "services": {
-      "via": "category",
-      "collection": "service"
-    },
-    "slug": {
-      "type": "string",
-      "unique": true
+      "type": "richtext"
     },
     "cover": {
       "model": "file",
@@ -41,12 +32,6 @@
       "type": "component",
       "repeatable": false,
       "component": "service-components.seo"
-    },
-    "coverColor": {
-      "type": "component",
-      "repeatable": false,
-      "component": "service-components.cover-color",
-      "required": true
     }
   }
 }

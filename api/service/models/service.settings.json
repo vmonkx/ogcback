@@ -70,6 +70,12 @@
     },
     "featured": {
       "type": "boolean"
+    },
+    "coverColor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "service-components.cover-color",
+      "required": true
     }
   }
 }
