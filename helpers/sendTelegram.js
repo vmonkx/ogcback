@@ -1,13 +1,18 @@
 const axios = require("axios").default;
 
+const DICT = {
+  firstName: "Имя",
+  phone: "Телефон",
+  comment: "Комментарий",
+};
+
 module.exports.sendMsg = async (message) => {
-  
   console.log("AXIOS", message);
   let fieldsOrder = ["⭐️ Новая заявка с сайта"];
   if (message) {
     for (const key in message) {
       if (Object.hasOwnProperty.call(message, key)) {
-        fieldsOrder.push(`<b>${key}</b>: ${message[key]}`);
+        fieldsOrder.push(`<b>${DICT[key]}</b>: ${message[key]}`);
       }
     }
   }

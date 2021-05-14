@@ -31,6 +31,10 @@ module.exports = {
     },
     beforeUpdate: async (params, data) => {
       
+      if (data.published_at !== undefined) {
+        return;
+      }
+
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
       } else {

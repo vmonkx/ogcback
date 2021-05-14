@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/concepts/models.html#lifecycle-hooks)
  * to customize this model
  */
 
-const slugify = require('slugify');
+const slugify = require("slugify");
 const { getAverageColor } = require("fast-average-color-node");
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
     beforeCreate: async (data) => {
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
-      }else {
+      } else {
         data.slug = data.slug.toLowerCase();
       }
 
@@ -30,9 +30,13 @@ module.exports = {
       }
     },
     beforeUpdate: async (params, data) => {
+      if (data.published_at !== undefined) {
+        return;
+      }
+
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
-      }else {
+      } else {
         data.slug = data.slug?.toLowerCase();
       }
 
