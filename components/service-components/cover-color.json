@@ -2,7 +2,8 @@
   "collectionName": "components_service_components_cover_colors",
   "info": {
     "name": "coverColor",
-    "icon": "adjust"
+    "icon": "adjust",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,7 +17,8 @@
     },
     "urlImage": {
       "type": "string",
-      "private": true
+      "private": true,
+      "required": false
     }
   }
 }

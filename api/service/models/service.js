@@ -17,7 +17,7 @@ module.exports = {
         data.slug = data.slug.toLowerCase();
       }
 
-      if (!data.coverColor.urlImage) {
+      if (!data.coverColor?.urlImage) {
         data.coverColor.gradientStart = "rgba(182, 180, 193,1)";
         data.coverColor.gradientEnd = `rgba(182, 180, 193, 0)`;
       } else {
@@ -30,7 +30,9 @@ module.exports = {
       }
     },
     beforeUpdate: async (params, data) => {
-      
+      if (data.published_at !== undefined) {
+        return;
+      }
 
       if (data.name && !data.slug) {
         data.slug = slugify(data.name, { lower: true });
@@ -38,7 +40,7 @@ module.exports = {
         data.slug = data.slug?.toLowerCase();
       }
 
-      if (!data.coverColor.urlImage) {
+      if (!data.coverColor?.urlImage) {
         data.coverColor.gradientStart = "rgba(182, 180, 193,1)";
         data.coverColor.gradientEnd = `rgba(182, 180, 193, 0)`;
       } else {

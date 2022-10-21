@@ -9,10 +9,9 @@
         "build": "strapi build",
         "strapi": "strapi"
     },
-    "devDependencies": {},
     "dependencies": {
         "axios": "^0.26.1",
-        "fast-average-color-node": "^2.1.0",
+        "fast-average-color-node": "^2.4.0",
         "knex": "^0.21.18",
         "pg": "8.5.1",
         "slugify": "1.6.5",
